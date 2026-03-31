@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MinMIK | Managed IT Services Perth</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,16 +26,65 @@
     --accent: #00E5FF;
   }
 
+/* Container for the buttons */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Primary Button: Action Orange */
+.cta-button {
+  background-color: #ff6b00; /* Vibrant Orange for Action */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65a00;
+}
+
+/* Secondary Button: Trust Blue */
+.cta-secondary {
+  background-color: #004a99; /* Deep Professional Blue */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background-color: #003366;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+}
+
   html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--text-body);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+}
 
+h1, h2, h3, h4 {
+  font-weight: 700; /* Makes your titles look strong */
+  letter-spacing: -0.02em; /* Gives it that modern 'tight' tech look */
+}
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -349,7 +399,15 @@
     position: relative;
     overflow: hidden;
   }
+<div class="service-card">
+  <h3>Azure Cloud Migration</h3>
+  <p>Seamlessly transition your business to the cloud. We specialize in Azure architecture, cost optimization, and Microsoft 365 integration for Perth SMEs.</p>
+</div>
 
+<div class="service-card">
+  <h3>Cybersecurity & Compliance</h3>
+  <p>Protect your reputation with enterprise-grade security. We provide essential-eight alignment, threat monitoring, and proactive risk management.</p>
+</div>
   .service-card::after {
     content: '';
     position: absolute; bottom: 0; left: 0; right: 0;
@@ -827,9 +885,11 @@
     <div class="hero-content">
       <div class="hero-badge">Perth's Trusted MSP Partner</div>
       <h1>Turning Technology Into <em>Business Solutions</em></h1>
-      <p class="hero-sub">MinMIK delivers enterprise-grade managed IT services, cloud infrastructure, and cybersecurity to small and medium businesses across Perth — so you can focus on growing your business.</p>
+      <p class="hero-sub">Providing intelligent Managed IT, Azure Cloud, and Cybersecurity solutions for <strong>Perth</strong> and <strong>Western Australia</strong> businesses.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get a Free Consultation →</a>
+       <a href="tel:+61475127996" class="cta-secondary"></a>
+</div>
         <a href="#services" class="btn-outline">See Our Services</a>
       </div>
     </div>
@@ -1232,7 +1292,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 MinMIK. All rights reserved. ABN: 11 298 610 420</span>
+       <p>&copy; 2026 MinMIK | Managed IT Services in <strong>Perth, WA</strong> | ABN: 11 298 610 420</span>
     <span>Perth, Western Australia</span>
   </div>
 </footer>
