@@ -26,27 +26,55 @@
     --accent: #00E5FF;
   }
 
-/* Container for the buttons */
+/* Container for the two buttons */
 .hero-actions {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 25px;
+  gap: 15px; /* Spaces them nicely */
+  justify-content: center; /* Centers them */
+  margin-top: 30px;
 }
 
-/* Primary Button: Action Orange */
+/* Primary Button (The bright one) */
 .cta-button {
-  background-color: #ff6b00; /* Vibrant Orange for Action */
-  color: white;
+  background-color: #00ffff; /* The cyan/aqua color from your image */
+  color: #001a33; /* Dark text for contrast */
   padding: 14px 28px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #e65a00;
+  background-color: #d1ffff;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button (The dark outlined one) */
+.cta-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+/* Ensure centering on mobile */
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* Secondary Button: Trust Blue */
@@ -887,8 +915,8 @@ h1, h2, h3, h4 {
       <h1>Turning Technology Into <em>Business Solutions</em></h1>
       <p class="hero-sub">Providing intelligent Managed IT, Azure Cloud, and Cybersecurity solutions for <strong>Perth</strong> and <strong>Western Australia</strong> businesses.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get a Free Consultation →</a>
-       <a href="tel:+61475127996" class="cta-secondary"></a>
+  <a href="#contact" class="cta-button">Get a Free Consultation &rarr;</a>
+  <a href="#services" class="cta-secondary">See Our Services</a>
 </div>
         <a href="#services" class="btn-outline">See Our Services</a>
       </div>
@@ -1195,9 +1223,16 @@ h1, h2, h3, h4 {
           <div class="contact-icon">🌐</div>
           <div>
             <h3>Website</h3>
-            <a href="https://minmik.com" target="_blank">minmik.com</a>
+            <a href="https://minmik.com" target="_blank">www.minmik.com.au</a>
           </div>
         </div>
+       <div class="contact-card">
+  <div class="icon-wrapper"><img src="phone-icon.png" alt="Phone" /></div>
+  <div class="contact-details">
+    <h3>Phone</h3>
+    <a href="tel:+610475127996">0475 127 996</a>
+  </div>
+</div>
         <div class="contact-detail">
           <div class="contact-icon">📍</div>
           <div>
@@ -1286,7 +1321,7 @@ h1, h2, h3, h4 {
       <h5>Contact</h5>
       <ul>
         <li><a href="mailto:hello@minmik.com">hello@minmik.com</a></li>
-        <li><a href="https://minmik.com">minmik.com</a></li>
+        <li><a href="https://minmik.com">www.minmik.com.au</a></li>
         <li><a href="#contact">Book a Consultation</a></li>
       </ul>
     </div>
