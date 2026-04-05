@@ -106,6 +106,31 @@
     font-weight: 600 !important;
   }
 
+  .nav-remote {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent !important;
+    color: var(--accent) !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    font-size: 0.9rem;
+    border: 1.5px solid var(--accent) !important;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .nav-remote:hover {
+    background: rgba(0,229,255,0.12) !important;
+    color: var(--white) !important;
+  }
+
+  .nav-remote svg {
+    flex-shrink: 0;
+  }
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -750,6 +775,12 @@
       font-size: 1.1rem !important;
     }
 
+    .nav-links .nav-remote {
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem !important;
+      border-width: 2px !important;
+    }
+
     /* Hero adjustments */
     .hero {
       padding: 7rem 5% 4rem;
@@ -823,6 +854,10 @@
     <li><a href="#why">Why Us</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#process">How It Works</a></li>
+    <li><a href="#contact" class="nav-remote" onclick="window.open('https://download.teamviewer.com/download/TeamViewerQS.exe','_blank'); return false;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 10l3 3 3-3"/></svg>
+      Remote Support
+    </a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
 </nav>
@@ -1098,7 +1133,22 @@
 <div class="cta-band">
   <h2>Ready to Transform Your Business IT?</h2>
   <p>Book a free 30-minute consultation with our Perth team today — no obligations.</p>
-  <a href="#contact" class="btn-primary" style="display:inline-flex;">Book Free Consultation →</a>
+  <div style="display:flex; flex-direction:column; align-items:center; gap:1rem;">
+    <p style="font-size:0.88rem; color:rgba(255,255,255,0.45); letter-spacing:0.04em; text-transform:uppercase; margin:0;">Need help right now?</p>
+    <a href="#" onclick="window.open('https://download.teamviewer.com/download/TeamViewerQS.exe','_blank'); return false;"
+      style="display:inline-flex; align-items:center; gap:0.5rem; background:transparent; color:var(--accent); border:2px solid var(--accent); padding:0.75rem 2rem; border-radius:8px; font-weight:600; font-size:0.95rem; text-decoration:none; transition:background 0.2s, color 0.2s;"
+      onmouseover="this.style.background='rgba(0,229,255,0.12)'; this.style.color='#fff';"
+      onmouseout="this.style.background='transparent'; this.style.color='var(--accent)';">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 10l3 3 3-3"/></svg>
+      Remote Support — Click to Download
+    </a>
+    <div style="display:flex; align-items:center; gap:1rem; width:100%; max-width:340px;">
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.12);"></div>
+      <span style="color:rgba(255,255,255,0.3); font-size:0.8rem;">or</span>
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.12);"></div>
+    </div>
+    <a href="#contact" class="btn-primary" style="display:inline-flex;">Book Free Consultation →</a>
+  </div>
 </div>
 
 <!-- CONTACT -->
@@ -1120,7 +1170,7 @@
           <div class="contact-icon">📧</div>
           <div>
             <h3>Email</h3>
-            <a href="mailto:support@minmik.com.au">support@minmik.com.au</a></span></a>
+         <a href="mailto:support@minmik.com.au">support@minmik.com.au</a></span></a>
           </div>
         </div>
         <div class="contact-detail">
@@ -1230,7 +1280,7 @@
         <li>
           <div class="footer-contact-item">
             <span class="footer-contact-icon">📧</span>
-           <a href="mailto:support@minmik.com.au">support@minmik.com.au</a></span></a>
+       <a href="mailto:support@minmik.com.au">support@minmik.com.au</a></span></a>
           </div>
         </li>
         <li>
@@ -1255,7 +1305,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function handleSubmit(e) {
   e.preventDefault();
   document.getElementById('form-msg').style.display = 'block';
@@ -1275,18 +1325,4 @@ hamburger.addEventListener('click', () => {
 // Close menu when a nav link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-  });
-});
-</script>
-</body>
-</html>
+    hamburger.classList.rem
